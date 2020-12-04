@@ -19,7 +19,7 @@ public class checkerboard {
 			}
 		}
 		
-		for(int i = 0; i<num+1; i++) {
+		for(int i = 1; i<=num+1; i++) {
 			for(int j = 0; j<=num*4; j++) {
 				if(j%4==0) {
 					System.out.print("+");
@@ -28,7 +28,27 @@ public class checkerboard {
 				}
 			}
 			System.out.println();
+			
+			if(i!=num+1) {
+				if(i%2 != 0) {
+					odd_rows(num);
+					System.out.println("   |");
+				}
+				
+			}
 		}
+	}
+	
+	public static void odd_rows(int num) {
+		
+		for(int i = 0; i<num-1; i++) {
+			if(i%2!=0) {
+				System.out.print("|"+'\u2588'+'\u2588'+'\u2588');
+			}else {
+				System.out.print("|   ");
+			}
+		}
+		System.out.print("|");
 	}
 	
 	
